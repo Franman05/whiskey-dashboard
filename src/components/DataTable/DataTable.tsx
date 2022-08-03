@@ -7,6 +7,7 @@ import { Button, Dialog,
     DialogTitle } from '@material-ui/core';
 import { server_calls } from '../../api';
 import { useGetData } from '../../custom-hooks';
+import { WhiskeyForm } from '../WhiskeyForm';
 
 
 const columns: GridColDef[] = [
@@ -67,7 +68,7 @@ export const DataTable = () => {
             <DialogTitle id="form-dialog-title">Update List {selectionModel}</DialogTitle>
             <DialogContent>
                 <DialogContentText>Update List</DialogContentText>
-                    {/*<WhiskeyForm id={selectionModel!}/> */}
+                    <WhiskeyForm id={selectionModel!}/>
             </DialogContent>
             <DialogActions>
                 <Button onClick={handleClose} color="primary">Cancel</Button>

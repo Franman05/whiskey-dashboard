@@ -55,8 +55,11 @@ const useStyles = makeStyles({
         left: '50%',
         transform: 'translate(-50%, -50%)',
         color: 'white'
-    }
-    
+    },
+    button_text: {
+        color: "white",
+        textDecoration: "none",
+      },
 })
 
 export const Home = ( props:Whiskey) => {
@@ -69,7 +72,7 @@ export const Home = ( props:Whiskey) => {
             <nav>
                 <div className={classes.navbar_container}>
                     <h1 className={ `${classes.logo} `}>
-                        <a href="#" className={ `${classes.logo_a} ${classes.logo_navigation}` }>Brand</a>
+                        <a href="#" className={ `${classes.logo_a} ${classes.logo_navigation}` }>W.C.</a>
                     </h1>
                     <ul className={ `${classes.navigation} ${classes.logo_navigation}` }>
                         <li>
@@ -97,7 +100,11 @@ export const Home = ( props:Whiskey) => {
                 <div className={classes.main_text}>
                     <h1>{ props.title }</h1>
                     <p>Whiskey Collection!!</p>
-                    <Button color='primary' variant="contained">Collection</Button>
+                    <Button color='primary' variant="contained"> 
+                    <Link to="/dashboard" className={classes.button_text}>
+                        Collection
+                    </Link>
+                    </Button>
                 </div>
             </main>
         </div>
